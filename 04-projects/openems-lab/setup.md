@@ -99,7 +99,7 @@ To also run tests:
 ## Verified Build
 
 - **Date:** 2026-07-05
-- **OpenEMS commit:** latest `main` (shallow clone)
+- **OpenEMS commit:** <SHA from `git rev-parse HEAD`> (shallow clone)
 - **Gradle version:** 9.6.1
 - **Java toolchain:** Eclipse Temurin 21.0.7+6
 - **Node.js:** v22.16.0
