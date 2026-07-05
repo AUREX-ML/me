@@ -56,8 +56,8 @@ npm --version    # 10.x
 ## Step 3 — Clone the Repository
 
 ```bash
-cd ~/Desktop/me/04-projects/openems-lab
-
+mkdir -p ~/src/openems-lab
+cd ~/src/openems-lab
 git clone --depth=1 https://github.com/OpenEMS/openems.git
 cd openems
 ```
