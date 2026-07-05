@@ -24,7 +24,7 @@ Download the Eclipse Temurin 21 JDK for macOS (x64):
 ```bash
 curl -fsSL "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.7%2B6/OpenJDK21U-jdk_x64_mac_hotspot_21.0.7_6.tar.gz" \
   -o /tmp/jdk21.tar.gz
-
+shasum -a 256 /tmp/jdk21.tar.gz  # compare with the release's published SHA-256 before extracting
 sudo tar -xzf /tmp/jdk21.tar.gz -C /Library/Java/JavaVirtualMachines/
 
 # Verify
