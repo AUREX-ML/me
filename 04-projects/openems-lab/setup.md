@@ -90,7 +90,7 @@ To also run tests:
 | Error | Cause | Fix |
 |-------|-------|-----|
 | `Cannot find a Java installation matching: languageVersion=21` | Wrong JDK version | Set `JAVA_HOME` to Java 21: `export JAVA_HOME=$(/usr/libexec/java_home -v 21)` |
-| `The JAVA_HOME environment variable is not defined correctly` | PATH is broken (spaces in path) | Set PATH explicitly: `export PATH="/usr/local/node/bin:/usr/bin:/bin:/usr/sbin:/sbin"` |
+| `The JAVA_HOME environment variable is not defined correctly` | JAVA_HOME is unset or points to a non-existent JDK | Set `JAVA_HOME` via `/usr/libexec/java_home`: `export JAVA_HOME="$(/usr/libexec/java_home -v 21)"` |
 | `No such file or directory @ rb_sysopen ... .diff` | Homebrew LLVM patch bug on macOS 13 | Install tools via direct binary download instead of Homebrew |
 | `bash: tail: command not found` | VS Code terminal PATH corruption | Prepend `/usr/bin:/bin` to PATH before running commands |
 
