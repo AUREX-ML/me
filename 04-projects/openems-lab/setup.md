@@ -38,11 +38,11 @@ sudo tar -xzf /tmp/jdk21.tar.gz -C /Library/Java/JavaVirtualMachines/
 ```bash
 NODE_VERSION="22.16.0"
 curl -fsSL "https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-darwin-x64.tar.gz" \
-  -o /tmp/node.tar.gz
+  -o "/tmp/node-v${NODE_VERSION}-darwin-x64.tar.gz"
+curl -fsSL "https://nodejs.org/dist/v${NODE_VERSION}/SHASUMS256.txt" -o /tmp/SHASUMS256.txt
+grep " node-v${NODE_VERSION}-darwin-x64.tar.gz$" /tmp/SHASUMS256.txt | (cd /tmp && shasum -a 256 -c -)
 
-sudo tar -xzf /tmp/node.tar.gz -C /usr/local/ && \
-  sudo mv /usr/local/node-v${NODE_VERSION}-darwin-x64 /usr/local/node
-
+sudo tar -xzf "/tmp/node-v${NODE_VERSION}-darwin-x64.tar.gz" -C /usr/local/ && sudo mv /usr/local/node-v${NODE_VERSION}-darwin-x64 /usr/local/node
 echo 'export PATH=/usr/local/node/bin:$PATH' >> ~/.zshrc
 source ~/.zshrc
 
