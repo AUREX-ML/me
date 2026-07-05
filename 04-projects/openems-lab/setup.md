@@ -9,7 +9,7 @@ Verified working on: macOS 13.7.8 (Ventura), x86_64 — July 2026
 | Tool | Required Version | Install Method | Notes |
 |------|-----------------|----------------|-------|
 | Java (JDK) | **21** (exact) | [Temurin 21](https://adoptium.net/) | Java 26 is installed but OpenEMS Gradle toolchain requires 21 |
-| Node.js | 22 LTS | Direct binary or `brew install node` | Required for the UI build |
+| Node.js | 22 LTS | Direct binary download (recommended) | Required for the UI build |
 | Git | Any recent | Pre-installed on macOS | |
 | Gradle | Bundled (9.6.1) | `./gradlew` wrapper in repo | Do NOT install separately |
 
