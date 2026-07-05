@@ -19,7 +19,7 @@ This is the technical foundation for enerOS.
 
 ## Deliverables
 
-- [ ] OpenEMS development environment installed
+- [x] OpenEMS development environment installed
 - [ ] Backend running locally
 - [ ] UI accessible at `localhost`
 - [ ] Simulated meter or DER connected
@@ -32,15 +32,16 @@ This is the technical foundation for enerOS.
 
 ## Setup
 
-> Instructions will live in [`setup.md`](setup.md) once the environment is running.
+See [`setup.md`](setup.md) for full, verified setup instructions.
 
-**Prerequisites (planned):**
-- Java 17+
-- Node.js 18+
+**Prerequisites (verified):**
+- Java **21** (exact — newer versions break the Gradle toolchain)
+- Node.js 22 LTS
 - Git
 - Docker (optional, for containerised deployment)
 
 **Repository:** https://github.com/OpenEMS/openems
+**Cloned to:** `04-projects/openems-lab/openems/`
 
 ---
 
